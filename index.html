@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>myntra-clone</title>
+    <link rel="stylesheet" href="myntra.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+  </head>
+  <style>
+    *{
+    padding: 0;
+    margin: 0;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif ;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    align-items: center;
+    background-color:white;
+    border: 1px solid rgb(228, 226, 226) ;
+    position: fixed;
+    width: 1380px;
+    
+    
+}
+.nav{
+    width: 1380px;
+    background: rgb(12, 201, 12);
+}
+.nav img{
+    background-color: rgb(19, 181, 19);
+    /* border: 1px solid rgb(6, 84, 4); */
+    
+    width: 1380px;
+    height: 60px; 
+}
+.logo{
+    height: 65px;
+    width: 55px;
+    margin-left: 10px;
+}
+.nav-bar{
+display: flex;
+justify-content: space-between;
+min-width: 500px;
+}
+.nav-bar a:hover{
+    /* width: 600px;
+    height: 50px; */
+    transition-property: all;
+    border: #696e79;
+    color: #d53f58;
+    text-decoration:underline;
+}
+.action-bar{
+    margin-right: 30px;
+}
+.search-bar{
+    margin-right: 20px;
+} 
+.nav-bar a{
+    font-size: 14px;
+    letter-spacing: .3px;
+    color: #282c3f;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+.nav-bar a sup{
+    color: rgb(205, 35, 35);
+    font-size: 10px;
+}
+.search-icon {
+    box-sizing: content-box;
+    height: 20px;
+    padding: 10px;;
+    background: #f5f5f6;
+    color: #020c3d;
+    font-weight: 300;
+    cursor: pointer;
+    border-radius: 4px 0 0 4px;
+}
+:hover .search-bar{
+    background-color: #0d228b;
+}
+.search-bar{
+height: 40px;
+min-width: 400px;
+display: flex;
+align-items: center;
+}
+.search-input{
+    color: #696e79;
+    background: #f5f5f6;
+flex-grow: 1;
+height: 40px;
+
+}
+.action-bar{
+    display: flex;
+    justify-content: space-between;
+    min-width: 200px;
+}
+.action-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.top{
+    /* margin-top: 85px; */
+}
+.baner{
+    margin-top: 85px;
+    width: 100%;
+    height: 400px;
+}
+#heading{
+    margin: 20px;
+    letter-spacing: 2px;
+    color: #282c3f;
+}
+.category-item{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+
+}
+.shoe{
+    width: 200px;
+    height: 250px; 
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+margin: 20px;
+
+}
+button{
+    border: #f5f5f6 1px;
+}
+.cloth{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cloth2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cloth3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sport {
+    text-decoration:none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    color: #0c0c0c;
+}
+.carousel-item img{
+    width: 10px;
+    height: 150px;
+}
+.coupon img{
+    width: 470px;
+    height: 200px;
+}
+ .codee img{
+    width: 470px;
+    height: 200px;
+}
+.coupon{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+#head2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    color: rgb(67, 67, 236);
+}
+.deal{
+    width: 1380px;
+    height: 80px;
+    background-color: rgb(40, 193, 40);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+
+}
+.deal img{
+    width: 200px;
+    height: 80px;
+    margin-bottom: 80px;
+
+}
+.collection{
+display: flex;    
+}
+.box1{
+    border: 1px solid black;
+    width: 200px;
+    height: 300px;
+  }
+  .box2{
+    border: 1px solid black;
+    width: 200px;
+    height: 300px;
+  }
+  .box3{
+    border: 1px solid black;
+    width: 200px;
+    height: 300px;
+  }.box4{
+    border: 1px solid black;
+    width: 200px;
+    height: 300px;
+  }
+  .box5{
+    border: 1px solid black;
+    width: 200px;
+    height: 300px;
+  }
+  .box6{
+    border: 1px solid black;
+    width: 200px;
+    height: 300px;
+  }
+  .box7{
+    border: 1px solid black;
+    width: 200px;
+    height: 300px;
+  }
+.collection img{
+    width: 188px;
+    height: 298px;
+    margin: 0;
+    padding: 0;
+}
+
+.coll{
+    border: 1px solid black;
+    
+}
+.llo{
+    border: 2px solid black;
+
+}
+#heading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.container2{
+    background-color: whitesmoke;
+    display: flex;
+    
+}
+.nava a{
+    text-decoration: none;
+    color: grey;
+    display: flex;
+}
+.navi a{
+    text-decoration: none;
+    color: grey;
+    display: flex;
+    /* flex-direction: column; */
+    
+}
+.nava{
+    margin-left: 85px;
+    margin-top: 20px;
+}
+.link{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+}
+.link a{
+    color: gray;
+
+}
+.navi{
+margin-left: 180px;
+margin-top: 20px;
+
+}
+.online{
+    margin-left: 80px;
+    margin-top: 20px;
+
+}
+.online img{
+    margin-top: 10px;
+    width: 130px;
+    height: 60px;
+}
+.media{
+    margin-top: 30px;
+}
+.media img{
+    width: 40px;
+    height: 20px;
+    margin: 5px;
+
+}
+.original{
+    margin: 40px;
+    cursor:text;
+}
+.link{
+    display: flex;
+}
+.popular{
+    background-color: whitesmoke;
+
+}
+.popular a p{
+    color: gray;
+    margin-left: 80px;
+}
+.popular a {
+    
+text-decoration: none;
+}
+.popu{
+    margin-left: 80px;
+    border-top: 1px solid black;
+}
+.contact{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 80px;
+    margin-right: 20px;
+    border-bottom:  1px solid black;
+}
+.cont{
+    margin-left: 80px;
+}
+.cont p {
+    color: gray;
+        line-height: 1.8;
+      
+      
+}
+.online p{
+    color: gray;
+        line-height: 1.8;
+
+}
+@media (max-width:600px) {
+    /* .collection{
+display: flex;
+flex-wrap: wrap-reverse;
+    } */
+    .box1{
+        border: 1px solid black;
+        width: 150px;
+        height: 200px;
+      }
+      .box2{
+        border: 1px solid black;
+        width: 150px;
+        height: 200px;
+      }
+      .box3{
+        border: 1px solid black;
+        width: 150px;
+        height: 200px;
+      }.box4{
+        border: 1px solid black;
+        width: 150px;
+        height: 200px;
+      }
+      .box5{
+        border: 1px solid black;
+        width: 150px;
+        height: 200px;
+      }
+      .box6{
+        border: 1px solid black;
+        width: 150px;
+        height: 200px;
+      }
+      .box7{
+        border: 1px solid black;
+        width: 150px;
+        height: 200px;
+      }
+      .cloth{
+        width: 150px;
+        height: 200px;
+      }
+      .cloth2{
+        width: 150px;
+        height: 200px;
+      }
+      .cloth3{
+        width: 150px;
+        height: 200px;
+      }
+
+
+    
+    }
+
+@media (max-width:400px) {
+    /* .collection{
+display: flex;
+flex-wrap: wrap-reverse;
+    } */
+    .box1{
+        border: 1px solid black;
+        width: 120px;
+        height: 200px;
+      }
+      .box2{
+        border: 1px solid black;
+        width: 120px;
+        height: 200px;
+      }
+      .box3{
+        border: 1px solid black;
+        width: 120px;
+        height: 200px;
+      }.box4{
+        border: 1px solid black;
+        width: 120px;
+        height: 200px;
+      }
+      .box5{
+        border: 1px solid black;
+        width: 120px;
+        height: 200px;
+      }
+      .box6{
+        border: 1px solid black;
+        width: 120px;
+        height: 200px;
+      }
+      .box7{
+        border: 1px solid black;
+        width: 120px;
+        height: 200px;
+      }
+    
+}
+
+  </style>
+  <body>
+    <header>
+      <!-- <div class="container1"> -->
+      <div class="logo">
+        <a href="#">
+          <img class="logo" src="logo main.jpg" alt="myntra-logo"
+        /></a>
+      </div>
+      <nav class="nav-bar">
+        <a href="#">Men</a>
+        <a href="jj.html">Women</a>
+        <a href="#">Kids</a>
+        <a href="#">Home&Living</a>
+        <a href="#">Beauty</a>
+        <a href="#">Studio <sup>New</sup></a>
+      </nav>
+      <form action="">
+
+        <div class="search-bar">
+         <button onclick="search()">
+           <span class="material-symbols-outlined search-icon">search</span>
+         </button>
+          <input class="search-input" placeholder="Search for product,brand and more"/>
+        </div>
+      </form>
+        <div class="action-bar">
+          <div class="action-container">
+            <span class="material-symbols-outlined action-icon">person</span>
+            <span class="action-name"> Profile</span>
+          </div>
+          <div class="action-container">
+            <span class="material-symbols-outlined">favorite </span>
+            <span class="action-name"> Wishlist</span>
+          </div>
+          <div class="action-container">
+            <span class="material-symbols-outlined"> shopping_bag</span>
+            <span class="action-name"> bag</span>
+          </div>
+        </div>
+        <!-- </div> -->
+    </header>
+  </body>
+  <main>
+    <div class="banner-container">
+      <img class="baner" src="0cdca8b82bf42b2813b6e5429da2649a.webp" alt="banner"/>
+      <div class="nav">
+        <a href="#"><img class="top" src="botom.png" alt="topimg" /></a>
+      </div>
+    </div>
+    <h2 id="head2"><a href="#"></a>COUPONS CORNER</h2>
+    <div class="coupon">
+      <a href="#"><img src="discount.jpg.png" alt="" /></a>
+      <div class="codee">
+        <a href="#"><img class="code" src="code.png" alt="" /></a>
+      </div>
+    </div>
+    <div class="deal">
+      <a href="#"><img src="deale.png" alt="" /></a>
+    </div>
+
+    <div class="collection">
+      <div class="box1">
+        <a href="disclamier"><img src="22.jpg" alt="" /></a>
+      </div>
+      <div class="box2">
+        <a href="navi"><img src="33.jpg" alt="" /></a>
+      </div>
+      <div class="box3">
+        <a href="#"><img src="44.jpg" alt="" /></a>
+      </div>
+      <div class="box4">
+        <a href="#"><img src="55.jpg" alt="" /></a>
+      </div>
+      <div class="box5">
+        <a href="#"><img src="88.jpg" alt="" /></a>
+      </div>
+      <div class="box6">
+        <a href="#"><img src="66.jpg" alt="" /></a>
+      </div>
+      <div class="box7">
+        <a href="#"><img src="77.jpg" alt="" /></a>
+      </div>
+    </div>
+
+    <div class="option">
+      <h1 id="heading">SHOP BY CATEGORY</h1>
+    </div>
+
+    <div class="category-item">
+    
+      <a href="#"><img class="shoe" src="1.png" alt="shoe2" /></a>
+      <a href="#"><img class="shoe" src="2.png" alt="shoe3" /></a>
+      <a href="#"><img class="shoe" src="3.png" alt="shoe4" /></a>
+      <a href="#"><img class="shoe" src="4.png" alt="shoe5" /></a>
+      <a href="#"><img class="shoe" src="5.png" alt="shoe6" /></a>
+      <a href="#"><img class="shoe" src="6.png" alt="shoe6" /></a>
+      <a href="#"><img class="shoe" src="7.png" alt="shoe6" /></a>
+      <a href="#"><img class="shoe" src="8.png" alt="shoe6" /></a>
+      <a href="#"><img class="shoe" src="9.png" alt="shoe6" /></a>
+    </div>
+      <div class="cloth">
+
+          <a href="#"><img class="shoe" src="10.png" alt="shoe6" /></a>
+          <a href="#"><img class="shoe" src="11.png" alt="shoe6" /></a>
+          <a href="#"><img class="shoe" src="12.png" alt="shoe6" /></a>
+
+        </div>
+        <div class="cloth2">
+            <a href="#"><img class="shoe" src="13.png" alt="shoe6" /></a>
+            <a href="#"><img class="shoe" src="14.png" alt="shoe6" /></a>
+        </div>
+        <div class="cloth3">
+            <a href="#"><img class="shoe" src="15.png" alt="shoe6" /></a>
+
+        </div>
+
+
+      
+
+    <div class="container2">
+        <div class="nava">
+            <h6>ONLINE SHOPPING</h6>
+            <a href="#">Men</a>
+            <a href="#">Women</a>
+            <a href="#">Kids</a>
+            <a href="#">Men's Activewear</a>
+            <a href="#">Women's Activewear</a>
+            <a href="#">Kids Wear</a>
+            <a href="#">Men's Ethnic Wear</a>
+            <div class="link">
+                <h6>USEFUL LINKS</h6>
+                <a href="#">Blog</a>
+                <a href="#">Careers</a>
+                <a href="#">Site Map</a>
+                <a href="#">Corporate Information</a>
+                <a href="#">whitehat</a>
+                <a href="#">Cleartrip</a>
+            </div>
+        </div>
+
+
+
+        <div class="navi">
+            <h6>CUSTOMER POLICIES</h6>
+                <a href="#">Contact Us</a>
+                <a href="#">FAQ</a>
+                <a href="#">T&C</a>
+                <a href="#">Terms Of Use</a>
+                <a href="#">Track Of Orders</a>
+                <a href="#">Shipping</a>
+                <a href="#">Cancellation</a>
+                <a href="#">Returns</a>
+                <a href="#">Privacy policy</a>
+                <a href="#">Grievance Officer</a>
+                </div>
+                <div class="online">
+                    <h6>EXPERIENCE CLOTH WEAR APP ON MOBILE</h6>
+                    <a href="#"><img src="google.png" alt=""></a>
+                    <a href="#"><img src="app.png" alt=""></a>
+                    <div class="media">
+                        <h6>KEEP IN TOUCH</h6>
+                        <a href="#"><img src="fb.png" alt=""></a>
+                        <a href="#"><img src="instra.png" alt=""></a>
+                        <a href="#"><img src="twitter.png" alt=""></a>
+                        <a href="#"><img src="youtue.png" alt=""></a>
+                        
+                    </div>
+                </div>
+                    <div class="original">
+                        <img src="org.png" alt="">
+                        <img src="orga.png" alt="">
+                    </div>
+                </div>
+                <div class="popular">
+
+                    <div class="container3">
+
+                        <h6 class="popu">POPULAR SEARCHES</h6>
+                        <a href="#"><P id="para">Sherwani | Track Pants | Blazers | Sweaters For Men | Men Wedding Dresses
+                            | Kurta Pajama | Raincoats | Shorts | Trousers | Waistcaot | Inner Wear | Night wear | Jeans | Shirts | Jogger Jeans | Men Suits | T Shirts | Sweatshirt 
+                            Jackets For Men | Tracksuits | Ripped Jeans | Ethnic Wear | Hoodies | Swimwear | Dhotis | Boxers | Ties |   </P></a>
+                        </div>
+                        <div class="contact">
+
+                            <p>In case of any concern, <a href="#">Contact Us</a></p>
+                            <p> &copy; 2024 www.myntra.com.all rights reserved.</p>
+                            <p>A Online Company</p>
+                            
+                        </div>
+                          <div class="cont">
+                              <h6>MEN'S SHOPPING AT ONLINE CLOTH:A SUPERIOR EXPERIENCE</h6>
+                              <P>Online cloth is one of the best sites when it come to online shopping for men. The finest of material,superior design and unbeatable style go into the making of our men's shopping collection 
+                                  Our range of online shopping men's wear,accessries,footwear and personal care products are second to none. Compared with other men's shopping sites, Myntra brings you the best price products which Won't hurt your pocket.With seasonal discount on trendy casual wear, suits,blazers and more, online shopping for men at online cloth just gets even more irresistible!  
+                              </P>
+
+                          </div>
+                        <div class="online">
+                            <h6>ONLINE SHOPPING FOR MEN:OPTION UNLIMITED</h6>
+                            <P>At Online cloth,our online shopping fashion for men collection features plenty of options to create multiple outfits.At our men's online shop we have brought together an exhaustive range of products from the best men's brands. Here is a list of must-haves from the wide variety of awesome products at Online shopping:
+                            </P>
+                       <p>1. Opt for a charming yet laid-back look with cool <strong>T-shirts</strong>and casual shirts worn with stylish jeans,casual trousers or shorts. Stay sharp and sophisticated with our smart option in formal shirts and trousers. Look dapper when meeting your client in our smooth suits. Put on trendy blazers for formal occasions. On your online mem's clothes' shopping journey,make sure you include kurtas,jackets and sherwanis from our festive wear collection.Stay warm and comfartable in sweaters and sweatshirts.Get fit and ready for adventure,With
+                    our sports and active wear collection.</p>
+                    <p>   2. Clothing Variety:Explore a vast array of clothing options including formal wear, casual wear, sportswear, ethnic wear, and more.
+                        Different styles, patterns, and colors cater to various tastes and occasions.
+                        </p>
+                        <p>3.Bring impeccable style to your shoe closet with our incredible collection of footwear for men. Look classy during formal and semi-formal occasions with derbies, loafers and oxfords. Stay hip and happening in parties with boat shoes, monks and brogues from our casual men’s footwear range. Lead an active lifestyle with sneakers and running shoes from our sports footwear selection. Pick up sandals, floaters and flip-flops for a trip to the beach. We also host socks in our men’s online shopping collection. That’s basically everything under one roof!
+                        </p>
+                        <p>Make sure you check out fun printed men’s T-shirts featuring your favourite characters from DC Comics and Marvel studios. Relive the magic of your favourite superhero from Justice League. Fly high with Superman, battle the bad guys with Batman, or get trendy in lightning-speed with a Flash T-shirt. Grab our cool Marvel Avengers T-shirts. Stay powered up with the Iron Man, or walk with the warriors in a Thor T-shirt.
+
+                            Our online shopping fashion for mens collection includes even more amazing merchandise such as innerwear, sleepwear, track pants, personal care, wallets, belts and other fashion accessories.
+                            
+                            </p>
+                            <h6>MEN’S SHOPPING MADE EASY AT Online Cloth</h6>
+                            <p>
+                                Myntra is the most convenient men’s online store, what with our simplified shopping and payment procedures. With just a few clicks of the mouse or taps on your smartphone, you can buy your favorites from the best men’s brands right away.
+                                
+                                </p>
+                        </div>
+                    </div>
+    
+                    
+    
+  </main>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"
+  ></script>
+</html>
